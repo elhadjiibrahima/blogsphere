@@ -5,7 +5,6 @@ export interface Comment {
     id: string
     username: string
     full_name?: string
-    avatar_url?: string
   }
   article_id: string
   created_at: string
