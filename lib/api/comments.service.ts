@@ -4,7 +4,7 @@ export interface Comment {
   author: {
     id: string
     username: string
-    full_name?: string
+    
   }
   article_id: string
   created_at: string
