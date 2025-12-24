@@ -15,7 +15,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
     ? formatDistanceToNow(new Date(article.created_at), { addSuffix: true })
     : "Recently"
 
-  const authorName = article.author?.username || "Anonymous"
+  const authorName = article.author || "Anonymous"
    const authorInitial = authorName[0]?.toUpperCase() || "A"
 
   return (

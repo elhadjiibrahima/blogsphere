@@ -72,13 +72,13 @@ export default function ArticlePage() {
         {/* Author Info */}
         <div className="flex items-center gap-4">
           <Link
-            href={`/profile/${article.author?.username || "unknown"}`}
+            href={`/profile/${article.author || "unknown"}`}
             className="flex items-center gap-3 hover:opacity-80"
           >
             
             <div>
-              <p className="font-medium">{  article.author?.username || "Unknown User"}</p>
-              <p className="text-sm text-muted-foreground">@{article.author?.username || "unknown"}</p>
+              <p className="font-medium">{  article.author || "Unknown User"}</p>
+              <p className="text-sm text-muted-foreground">@{article.author || "unknown"}</p>
             </div>
           </Link>
         </div>

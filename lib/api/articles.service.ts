@@ -2,11 +2,7 @@ import { api } from "./axios-config"
 
 export interface Article {
   id: string
-  author: {
-    id: string
-    username: string
-    email?: string
-  }
+  author: string
   title: string
   content: string
   status: "draft" | "published"
