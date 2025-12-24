@@ -15,8 +15,8 @@ export function ArticleCard({ article }: ArticleCardProps) {
     ? formatDistanceToNow(new Date(article.created_at), { addSuffix: true })
     : "Recently"
 
-  const authorName = article.author  || "Anonymous"
-  const authorInitial = authorName[0]?.toUpperCase() || "A"
+  const authorName = article.author?.username || "Anonymous"
+   const authorInitial = authorName[0]?.toUpperCase() || "A"
 
   return (
     <Card className="group hover:shadow-md transition-shadow duration-300">
@@ -38,7 +38,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
                 {article.title || "Untitled"}
               </h2>
               <p className="text-muted-foreground line-clamp-3 text-sm sm:text-base">
-                {article.excerpt || "No excerpt available"}
+                {/* {article.excerpt || "No excerpt available"} */}
               </p>
             </div>
 
@@ -46,11 +46,11 @@ export function ArticleCard({ article }: ArticleCardProps) {
             <div className="flex items-center gap-4 pt-2">
               <div className="flex items-center gap-1.5 text-muted-foreground">
                 <Heart className="h-4 w-4" />
-                <span className="text-sm">{article.likes_count || 0}</span>
+                {/* <span className="text-sm">{article.likes_count || 0}</span> */}
               </div>
               <div className="flex items-center gap-1.5 text-muted-foreground">
                 <Eye className="h-4 w-4" />
-                <span className="text-sm">{article.views_count || 0}</span>
+                {/* <span className="text-sm">{article.views_count || 0}</span> */}
               </div>
             </div>
           </div>
