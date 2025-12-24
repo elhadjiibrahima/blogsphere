@@ -23,7 +23,15 @@ export default function HomePage() {
     setIsLoading(true)
     setError("")
 
-    
+    try {
+      const data = await articlesService.getArticles()
+      setArticles(data)
+    } catch (err: any) {
+      console.error("[v0] Error loading articles:", err)
+      setError("Failed to load articles. Please try again later.")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
