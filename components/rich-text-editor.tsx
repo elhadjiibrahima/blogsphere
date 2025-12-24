@@ -74,7 +74,7 @@ function EditorContent() {
     try {
       const article = await articlesService.getArticleById(id)
       setTitle(article.title)
-      setExcerpt(article.excerpt)
+      
       setContent(article.content)
     } catch {
       toast.error("Failed to load article")
@@ -98,9 +98,6 @@ function EditorContent() {
 
       if (articleId) {
         await articlesService.updateArticle(articleId, data)
-      } else {
-        const article = await articlesService.createArticle(data)
-        router.push(`/editor?id=${article.id}`)
       }
 
       toast.success("Draft saved")
@@ -128,9 +125,6 @@ function EditorContent() {
 
       if (articleId) {
         await articlesService.updateArticle(articleId, data)
-      } else {
-        const article = await articlesService.createArticle(data)
-        id = article.id
       }
 
       toast.success("Article published")

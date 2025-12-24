@@ -25,11 +25,7 @@ export function LikeButton({ articleId, initialLikes, initialIsLiked = false }: 
         await articlesService.unlikeArticle(articleId)
         setLikes((prev) => prev - 1)
         setIsLiked(false)
-      } else {
-        await articlesService.likeArticle(articleId)
-        setLikes((prev) => prev + 1)
-        setIsLiked(true)
-      }
+      } 
     } catch (err) {
       toast.error("Failed to update like. Please try again.")
     } finally {

@@ -42,17 +42,6 @@ export function ArticleCard({ article }: ArticleCardProps) {
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="flex items-center gap-4 pt-2">
-              <div className="flex items-center gap-1.5 text-muted-foreground">
-                <Heart className="h-4 w-4" />
-                {/* <span className="text-sm">{article.likes_count || 0}</span> */}
-              </div>
-              <div className="flex items-center gap-1.5 text-muted-foreground">
-                <Eye className="h-4 w-4" />
-                {/* <span className="text-sm">{article.views_count || 0}</span> */}
-              </div>
-            </div>
           </div>
         </Link>
       </CardContent>

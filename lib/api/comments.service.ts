@@ -1,3 +1,5 @@
+import { api } from "./axios-config"
+
 export interface Comment {
   id: string
   content: string
@@ -16,7 +18,7 @@ export interface CreateCommentData {
 
 // These service methods are kept for future implementation
 export const commentsService = {
-  async getCommentsByArticle(articleId: string): Promise<Comment[]> {
+  async getCommentsByArticle(id: string): Promise<Comment[]> {
      const response = await api.get(`/articles/${id}/comments/`)
     return response.data
   },

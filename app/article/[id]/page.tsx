@@ -89,19 +89,13 @@ export default function ArticlePage() {
             <Calendar className="h-4 w-4" />
             <span>{format(new Date(article.created_at), "MMMM dd, yyyy")}</span>
           </div>
-          <div className="flex items-center gap-1.5">
-            <Eye className="h-4 w-4" />
-            <span>{article.views_count || 0} views</span>
-          </div>
+          
         </div>
 
-        {/* Actions */}
-        <div className="flex items-center gap-3 pt-4 border-t border-border">
-          <LikeButton articleId={article.id} initialLikes={article.likes_count || 0} />
-        </div>
+        
       </header>
 
-      {/* Article Content */}
+   
       <div
         className="prose prose-lg max-w-none mb-12 [&_h1]:text-4xl [&_h1]:font-serif [&_h1]:font-bold [&_h1]:mb-4 [&_h2]:text-3xl [&_h2]:font-serif [&_h2]:font-bold [&_h2]:mb-3 [&_h2]:mt-8 [&_p]:leading-relaxed [&_p]:mb-4 [&_blockquote]:border-l-4 [&_blockquote]:border-pastel-mint [&_blockquote]:pl-4 [&_blockquote]:italic [&_ul]:my-4 [&_ol]:my-4"
         dangerouslySetInnerHTML={{ __html: article.content }}

@@ -72,7 +72,7 @@ export default function ProfilePage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
 
             <div className="flex-1">
-              <h1 className="text-3xl font-serif font-bold mb-2">{user.full_name || user.username}</h1>
+              <h1 className="text-3xl font-serif font-bold mb-2">{user.username}</h1>
               <p className="text-muted-foreground mb-4">@{user.username}</p>
 
               {user.bio && <p className="text-sm leading-relaxed mb-4">{user.bio}</p>}
