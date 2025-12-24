@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { useParams, useRouter } from "next/navigation"
 import { articlesService, type Article } from "@/lib/api/articles.service"
 import { LikeButton } from "@/components/like-button"
-import { CommentList } from "@/components/comment-list"
 import { LoadingSpinner } from "@/components/loading-spinner"
 import { ErrorMessage } from "@/components/error-message"
 import { Button } from "@/components/ui/button"
@@ -78,8 +77,8 @@ export default function ArticlePage() {
           >
             
             <div>
-              <p className="font-medium">{  article.author || "Unknown User"}</p>
-              <p className="text-sm text-muted-foreground">@{article.author || "unknown"}</p>
+              <p className="font-medium">{  article.author?.username || "Unknown User"}</p>
+              <p className="text-sm text-muted-foreground">@{article.author?.username || "unknown"}</p>
             </div>
           </Link>
         </div>
